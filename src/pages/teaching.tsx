@@ -73,9 +73,21 @@ const institutions: Institution[] = [
 
 const classroomActivities: { course: string; activities: { title: string; description: string }[] }[] = [
   {
-    course: 'Statistical Methods in Sociology',
+    course: 'Introduction to Social Statistics',
     activities: [
-      { title: '', description: '' },
+      {
+        title: 'Understanding the Central Limit Theorem',
+        description: 'Students physically draw repeated samples from a population of characters to observe, hands-on, how sample means converge toward the population mean and standard error shrinks as sample size increases.',
+      },
+    ],
+  },
+  {
+    course: 'Social Research Methods',
+    activities: [
+      {
+        title: 'Understanding Thematic Coding',
+        description: 'Students practice thematic coding by reading real interview excerpts on COVID-era student experiences, identifying codes and themes, selecting supporting quotes, and comparing interpretations in small groups—building hands-on qualitative analysis skills.',
+      },
     ],
   },
 ];
@@ -217,7 +229,7 @@ export default function Teaching() {
         </section>
 
         <section>
-          <h2>Student Evaluation</h2>
+          <h2>Student Testinomials</h2>
           <div className="testimonials">
             {testimonials.map((t, i) => (
               <blockquote className="testimonial" key={i}>
