@@ -138,16 +138,24 @@ export default function Teaching() {
           </p>
         </section>
 
-        <section>
+<section>
           <h2>Example of My Teaching</h2>
           <p>
             A slide I designed for social statistics, covering measures of central tendency through guided practice and an applied example.
           </p>
-          <iframe
-            src="/TeachingExample.pdf#toolbar=0&view=FitH"
-            className="pdf-embed"
-            title="Example teaching slides"
-          />
+<div className="slide-viewer">
+            <div className="slide-gallery">
+              {Array.from({ length: 18 }, (_, i) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={i}
+                  src={`/teaching-slides/slide-${String(i + 1).padStart(2, '0')}.jpg`}
+                  alt={`Slide ${i + 1}`}
+                  className="slide-gallery__img"
+                />
+              ))}
+            </div>
+          </div>
         </section>
 
         <section>
