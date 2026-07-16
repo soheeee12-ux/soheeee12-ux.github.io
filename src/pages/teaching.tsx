@@ -100,23 +100,23 @@ const certificates: { title: string; issuer: string; year: string; description: 
 const testimonials = [
   {
     quote: "Sohee Shin is one of the best teachers I've ever had. She is extremely sweet and listens to her students. She genuinely wants her students to do well... Unlike other professors she wants her students to actually learn, she doesn't make tests hard to be hard.",
-    course: 'Statistical Methods for Sociology, Fall 2023 (Solo Instructor)',
+    course: 'A student from Statistical Methods for Sociology (Fall 2023)',
   },
   {
     quote: "Sohee was incredibly kind and helpful and I'm not one for math but she made it easier than it is for me oftentimes. It was helpful to have her be so enthusiastic about sociology in terms of learning.",
-    course: 'Statistical Methods for Sociology, Fall 2023 (Solo Instructor)',
+    course: 'A student from Statistical Methods for Sociology (Fall 2023)',
   },
   {
-    quote: 'Easy to understand and well-structured so you know exactly what is expected of you.',
-    course: 'Statistical Methods for Sociology, Fall 2023 (Solo Instructor)',
-  },
+    quote: 'I thought the format was great and my professor did a great job being organized and providing us with resources and examples to understand thematerial. I learned a lot and was able to retain it all and stay engaged in thiscourse.',
+    course: 'A student from Statistical Methods for Sociology (Fall 2023)',
+     },
   {
     quote: 'She was always patient and willing to explain concepts multiple times, even if she had already covered them before. Her dedication to helping students and answering questions, no matter how many times they were asked, was truly appreciated.',
-    course: 'Social Statistics, Lab Session (Teaching Assistant)',
+    course: 'A student from Social Statistics (Fall 2024)',
   },
   {
-    quote: 'Something I benefited from in this lab was the way we got to work hands-on on whatever the topic was, which can be difficult, so it was nice to get help. It was also nice to be able to work together with someone or in a group because we got to hear it in a less complicated way.',
-    course: 'Research Methods, Lab Session (Teaching Assistant)',
+    quote: 'The part of this course that benefitted my learning the most was the lab section led by Sohee Shin. She explained concepts clearly, walked us through each step of the research process, and made complicated assignments feel manageable. Any time the lecture was confusing, she broke it down in a straightforward way that actually helped things click. She created an environment where students felt comfortable asking questions, and she always made sure we understood not just what to do, but why we were doing it. Her guidance is honestly what helped me stay on track in this class.',
+    course: 'A student from Research Methods (Fall 2025)',
   },
 ];
 
