@@ -184,17 +184,17 @@ export default function Research() {
                       alt="Predicted probability of reporting very satisfied with life, by couple educational pairing type"
                       className="research-figure__img"
                     />
-
-                    <figcaption className="research-figure__caption">
+<figcaption className="research-figure__caption">
                       <strong>Figure.</strong> Predicted probability of
                       reporting very satisfied with life, by couple educational
                       pairing (95% CI).
                       <br />
                       <br />
-                      <strong>Main finding:</strong> Marriage-migrant
-                      women&apos;s life satisfaction depends less on
-                      spouses&apos; relative educational standing than on the
-                      couple&apos;s educational resources.
+                      <strong>Main finding:</strong> What matters for
+                      marriage-migrant women&apos;s life satisfaction is the
+                      presence of college-level educational resources within
+                      the couple, not their relative standing between spouses
+                      or which spouse holds them.
                     </figcaption>
                   </figure>
                 </div>
