@@ -4,6 +4,7 @@ import { site } from '../content/site';
 
 function highlightName(text: string) {
   const parts = text.split(/(Sohee Shin)/g);
+
   return parts.map((part, i) =>
     part === 'Sohee Shin' ? <strong key={i}>{part}</strong> : part
   );
@@ -17,12 +18,23 @@ type WorkItem = {
   url?: string;
 };
 
-function Citation({ authors, title, venue, status, url }: WorkItem) {
+function Citation({
+  authors,
+  title,
+  venue,
+  status,
+  url,
+}: WorkItem) {
   return (
     <li>
       {highlightName(authors)}. <em>{title}.</em>{' '}
       {venue && <em>{venue}</em>}
-      {status && <>{venue ? '. ' : ''}{status}.</>}
+      {status && (
+        <>
+          {venue ? '. ' : ''}
+          {status}.
+        </>
+      )}
       {url && (
         <>
           {' '}
@@ -48,17 +60,20 @@ const programs = [
     relatedWork: [
       {
         authors: 'Shin, Sohee, and Tim F. Liao',
-        title: 'Educational Pairing and Life Satisfaction Among Marriage-Migrant Women in South Korea',
+        title:
+          'Educational Pairing and Life Satisfaction Among Marriage-Migrant Women in South Korea',
         status: 'Under Review',
       },
       {
         authors: 'Shin, Sohee',
-        title: 'When Do Resources Matter? Gender Ideology and Housework in Transnational Marriages in South Korea',
+        title:
+          'When Do Resources Matter? Gender Ideology and Housework in Transnational Marriages in South Korea',
         status: 'Working Paper',
       },
       {
         authors: 'Shin, Sohee',
-        title: 'Educational Pairing and Labor Market Participation among Marriage-Migrant Women in South Korea',
+        title:
+          'Educational Pairing and Labor Market Participation among Marriage-Migrant Women in South Korea',
         status: 'Working Paper',
       },
     ] as WorkItem[],
@@ -88,9 +103,16 @@ const programs = [
       'How does cumulative disadvantage across the life course contribute to health stratification?',
     ],
     relatedWork: [
+       {
+        authors: 'Shin, Sohee, and Tim F. Liao',
+        title:
+          'Unemployment Duration, Racial Disparity in Exposure, and Hypertension Risk in the United States: A Case-Crossover Study',
+        status: 'Under Review',
+      },
       {
         authors: 'Shin, Sohee, and Jeehae Kang',
-        title: 'Occupational Class Trajectories and Midlife Health: Cumulative Disadvantage Across the Life Course',
+        title:
+          'Occupational Class Trajectories and Midlife Health: Cumulative Disadvantage Across the Life Course',
         status: 'Working Paper',
       },
     ] as WorkItem[],
@@ -111,54 +133,88 @@ export default function Research() {
 
         <section>
           <p>
-            My research examines how social inequalities are produced, reproduced, and measured across the life course. My substantive research focuses on family dynamics, gender, and migration, with particular attention to how couple-level resources and gender norms shape the well-being and socioeconomic incorporation of immigrant women. Complementing this work, I study the social determinants of health and develop quantitative demographic methods to improve the identification and interpretation of population processes.
+            My research examines how social inequalities are produced,
+            reproduced, and measured across the life course. My substantive
+            research focuses on family dynamics, gender, and migration, with
+            particular attention to how couple-level resources and gender norms
+            shape the well-being and socioeconomic incorporation of immigrant
+            women. Complementing this work, I study the social determinants of
+            health and develop quantitative demographic methods to improve the
+            identification and interpretation of population processes.
           </p>
+
           <p>
-            My methods include demographic methods, longitudinal analysis, simulation studies, and computational techniques to study family dynamics and social inequality.
+            My methods include demographic methods, longitudinal analysis,
+            simulation studies, and computational techniques to study family
+            dynamics and social inequality.
           </p>
         </section>
 
         {programs.map((program) => (
           <section key={program.name}>
             <h2>{program.name}</h2>
+
             <p>{program.intro}</p>
 
-{program.name === 'Family, Gender, and Social Inequality' ? (
+            {program.name ===
+            'Family, Gender, and Social Inequality' ? (
               <>
                 <p className="research-project__label">Key Questions</p>
-                <ul className="cv-list">
-                  <li>{program.keyQuestions[0]}</li>
-                </ul>
 
-                <figure className="research-figure">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/study1-figure.png"
-                    alt="Predicted probability of reporting very satisfied with life, by couple education pairing type"
-                    className="research-figure__img"
-                  />
-             <figcaption className="research-figure__caption">
-                    Figure. Predicted probability of reporting very satisfied with life, by couple educational pairing (95% CI).
-                    <br />
-                    <br />
-                    <strong>Main finding:</strong> Marriage-migrant women&apos;s life satisfaction depends less on spouses&apos; relative educational standing than on the couple&apos;s educational resources.
-                  </figcaption>
+                <div className="research-project">
+                  <ul className="cv-list">
+                    <li>{program.keyQuestions[0]}</li>
+                  </ul>
+
+                  <p className="research-project__overview">
+                    This study examines how educational resources within
+                    cross-border marriages shape marriage-migrant women&apos;s
+                    life satisfaction in South Korea. Moving beyond individual
+                    and institutional-level explanations, it conceptualizes education as a
+                    couple-level resource. It asks whether
+                    women&apos;s well-being depends on which spouse is more
+                    educated or on the educational resources available within
+                    the couple.
+                  </p>
+
+                  <figure className="research-figure">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/study1-figure.png"
+                      alt="Predicted probability of reporting very satisfied with life, by couple educational pairing type"
+                      className="research-figure__img"
+                    />
+
+                    <figcaption className="research-figure__caption">
+                      <strong>Figure.</strong> Predicted probability of
+                      reporting very satisfied with life, by couple educational
+                      pairing (95% CI).
+                      <br />
+                      <br />
+                      <strong>Main finding:</strong> Marriage-migrant
+                      women&apos;s life satisfaction depends less on
+                      spouses&apos; relative educational standing than on the
+                      couple&apos;s educational resources.
+                    </figcaption>
                   </figure>
-                  
+                </div>
 
                 <ul className="cv-list">
-                  {program.keyQuestions.slice(1).map((q) => (
-                    <li key={q}>{q}</li>
+                  {program.keyQuestions.slice(1).map((question) => (
+                    <li key={question}>{question}</li>
                   ))}
                 </ul>
               </>
             ) : (
               program.keyQuestions.length > 0 && (
                 <>
-                  <p className="research-project__label">Key Questions</p>
+                  <p className="research-project__label">
+                    Key Questions
+                  </p>
+
                   <ul className="cv-list">
-                    {program.keyQuestions.map((q) => (
-                      <li key={q}>{q}</li>
+                    {program.keyQuestions.map((question) => (
+                      <li key={question}>{question}</li>
                     ))}
                   </ul>
                 </>
@@ -168,9 +224,10 @@ export default function Research() {
             {program.relatedWork.length > 0 && (
               <>
                 <p className="research-project__label">Related Work</p>
+
                 <ul className="cv-list">
-                  {program.relatedWork.map((item, i) => (
-                    <Citation key={i} {...item} />
+                  {program.relatedWork.map((item, index) => (
+                    <Citation key={index} {...item} />
                   ))}
                 </ul>
               </>
