@@ -37,7 +37,7 @@ export default function CV() {
       <main className="container">
        
 <h1>Curriculum Vitae</h1>
-        <p className="cv__updated">Last updated May 2026.</p>
+        <p className="cv__updated">Last updated September 2026.</p>
 
         <p className="cv__download">
           <a href="/CV.pdf" download>
