@@ -4,7 +4,7 @@ export const site = {
   email: 'sohees2@illinois.edu',
   github: 'https://github.com/soheeee12-ux',
   linkedin: 'https://www.linkedin.com/in/sohee-s-8a5558a8/',
-  googleScholar: '',
+    googleScholar: 'https://scholar.google.com/citations?user=M9jq-WQAAAAJ&hl=en',
   orcid: '',
   researchInterests: [
     'Gender and Migration',

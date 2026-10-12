@@ -58,11 +58,12 @@ const programs = [
       "(Study 3): How do couple-level educational resources shape migrant women's labor market participation and occupational outcomes?",
     ],
     relatedWork: [
-      {
+           {
         authors: 'Shin, Sohee, and Tim F. Liao',
         title:
           'Educational Pairing and Life Satisfaction Among Marriage-Migrant Women in South Korea',
-        status: 'Under Review',
+           venue: 'Comparative Migration Studies',
+           status: 'Revise and Resubmit',
       },
       {
         authors: 'Shin, Sohee',
@@ -103,11 +104,13 @@ const programs = [
       'How does cumulative disadvantage across the life course contribute to health stratification?',
     ],
     relatedWork: [
-       {
+           {
         authors: 'Shin, Sohee, and Tim F. Liao',
         title:
-          'Unemployment Duration, Racial Disparity in Exposure, and Hypertension Risk in the United States: A Case-Crossover Study',
-        status: 'Under Review',
+          'Unequal Exposure, Equal Vulnerability, Unequal Incidence: Unemployment Duration and Hypertension Risk Across Race in the United States',
+        venue: 'Social Sciences 15(10): 665',
+        status: '2026',
+        url: 'https://doi.org/10.3390/socsci15100665',
       },
       {
         authors: 'Shin, Sohee, and Jeehae Kang',
@@ -190,7 +193,8 @@ export default function Research() {
                       pairing (95% CI).
                       <br />
                       <br />
-                      <strong>Main finding:</strong> What matters for
+                      <strong>Main finding:</strong> {' '}
+                      What matters for
                       marriage-migrant women&apos;s life satisfaction is the
                       presence of college-level educational resources within
                       the couple, not their relative standing between spouses

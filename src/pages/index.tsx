@@ -40,10 +40,15 @@ export default function Home() {
 
         <section>
           <h2>Contact</h2>
-          <p>
-            <a href={`mailto:${site.email}`}>{site.email}</a>
-          </p>
-          <p>
+                   <p>
+            {site.googleScholar && (
+              <>
+                <a href={site.googleScholar} target="_blank" rel="noopener noreferrer">
+                  Google Scholar
+                </a>
+                {' · '}
+              </>
+            )}
             <a href={site.github} target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
