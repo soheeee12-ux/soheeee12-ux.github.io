@@ -8,6 +8,7 @@ const links = [
   { href: '/research', label: 'Research' },
   { href: '/teaching', label: 'Teaching' },
   { href: '/cv', label: 'CV' },
+   { href: '/outside-academia', label: 'Outside Academia' },
 ];
 
 export default function Nav() {
