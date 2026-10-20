@@ -153,10 +153,19 @@ export default function Research() {
             processes.
           </p>
 
-          <nav className="research-topics" aria-label="Research areas">
+                    <nav
+            className="research-topics"
+            aria-label="Research areas"
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '0.65rem 2rem',
+              margin: '1.25rem 0 2.5rem',
+            }}
+          >
             <a href="#family">Family, Migration, and Inequality</a>
-            <a href="#health">Employment and Health</a>
             <a href="#methods">Demographic Methods</a>
+            <a href="#health">Employment and Health</a>
           </nav>
 
           <section
@@ -186,8 +195,7 @@ export default function Research() {
               >
                 <header className="study-header">
                   <h3 id={`${study.id}-heading`}>{study.title}</h3>
-                  <span className="study-status">{study.paper.status}</span>
-                </header>
+                                  </header>
                 <p>
                   <strong>Question:</strong> {study.question}
                 </p>
@@ -221,6 +229,27 @@ export default function Research() {
               </article>
             ))}
           </section>
+<section
+            id="methods"
+            className="research-section"
+            aria-labelledby="methods-heading"
+          >
+            <h2 id="methods-heading">Demographic Methods</h2>
+            <p>
+              Alongside my substantive research, I collaborate on quantitative
+              methods for demographic research. Our methodological work focuses
+              on age–period–cohort (APC) analysis and cohort identification.
+              Using simulation studies, we evaluate the performance of existing
+              APC models and develop methodological guidance for improving the
+              identification, estimation, and interpretation of cohort effects.
+            </p>
+            <h3 className="work-heading">Related work</h3>
+            <ul className="cv-list">
+              {methodsWork.map((item) => (
+                <Citation key={item.title} {...item} />
+              ))}
+            </ul>
+          </section>
 
           <section
             id="health"
@@ -246,73 +275,11 @@ export default function Research() {
             </ul>
           </section>
 
-          <section
-            id="methods"
-            className="research-section"
-            aria-labelledby="methods-heading"
-          >
-            <h2 id="methods-heading">Demographic Methods</h2>
-            <p>
-              Alongside my substantive research, I collaborate on quantitative
-              methods for demographic research. Our methodological work focuses
-              on age–period–cohort (APC) analysis and cohort identification.
-              Using simulation studies, we evaluate the performance of existing
-              APC models and develop methodological guidance for improving the
-              identification, estimation, and interpretation of cohort effects.
-            </p>
-            <h3 className="work-heading">Related work</h3>
-            <ul className="cv-list">
-              {methodsWork.map((item) => (
-                <Citation key={item.title} {...item} />
-              ))}
-            </ul>
-          </section>
+          
         </div>
       </main>
 
-      <style jsx>{`
-        .research-page { padding-bottom: 2rem; }
-        .research-page p { line-height: 1.7; }
-        .research-intro { max-width: 72ch; }
-        .research-topics {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.65rem 1.5rem;
-          margin: 1.25rem 0 2.5rem;
-          font-size: 0.95rem;
-        }
-        .research-topics a { text-underline-offset: 0.2em; }
-        .research-section { margin-top: 2.75rem; scroll-margin-top: 5rem; }
-        .research-section > p { max-width: 72ch; }
-        .study {
-          margin-top: 1.5rem;
-          padding: 1.5rem 0 0.25rem;
-          border-top: 1px solid #d1d5db;
-        }
-        .study-header {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: baseline;
-          gap: 0.4rem 1rem;
-        }
-        .study-header h3 { margin: 0; font-size: 1.15rem; line-height: 1.4; }
-        .study-status { font-size: 0.85rem; font-weight: 500; }
-        .study p { margin: 0.8rem 0; max-width: 72ch; }
-        .study-finding { padding-left: 1rem; border-left: 3px solid currentColor; }
-        .study-details { margin-top: 0.75rem; }
-        .study-details summary { cursor: pointer; width: fit-content; font-size: 0.95rem; }
-        .study-details summary:focus-visible,
-        .research-topics a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
-        .study-figure { margin: 1rem 0; }
-        .study-figure img { display: block; width: 100%; max-width: 560px; height: auto; }
-        .study-figure figcaption { margin-top: 0.65rem; max-width: 72ch; font-size: 0.875rem; line-height: 1.5; }
-        .work-heading { margin: 1.25rem 0 0.5rem; font-size: 1rem; }
-        @media (max-width: 600px) {
-          .research-topics { flex-direction: column; align-items: flex-start; }
-          .research-section { margin-top: 2rem; }
-          .study-header { flex-direction: column; gap: 0.35rem; }
-        }
-      `}</style>
+     
     </>
   );
 }
